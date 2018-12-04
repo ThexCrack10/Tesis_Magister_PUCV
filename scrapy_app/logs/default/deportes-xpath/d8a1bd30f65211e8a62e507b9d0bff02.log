@@ -1,0 +1,1705 @@
+2018-12-02 13:54:04 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: scrapy_app)
+2018-12-02 13:54:04 [scrapy.utils.log] INFO: Overridden settings: {'BOT_NAME': 'scrapy_app', 'LOG_FILE': 'logs\\default\\deportes-xpath\\d8a1bd30f65211e8a62e507b9d0bff02.log', 'NEWSPIDER_MODULE': 'scrapy_app.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['scrapy_app.spiders']}
+2018-12-02 13:54:04 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2018-12-02 13:54:05 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-12-02 13:54:05 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-12-02 13:54:05 [scrapy.middleware] INFO: Enabled item pipelines:
+['scrapy_app.pipelines.ScrapyAppPipeline']
+2018-12-02 13:54:05 [scrapy.core.engine] INFO: Spider opened
+2018-12-02 13:54:05 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-12-02 13:54:05 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2018-12-02 13:54:07 [scrapy.core.engine] DEBUG: Crawled (404) <GET https://www.feriachilenadellibro.cl/robots.txt> (referer: None)
+2018-12-02 13:54:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.feriachilenadellibro.cl/deportes?product_list_mode=list> (referer: None)
+2018-12-02 13:54:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.feriachilenadellibro.cl/deportes/deporte-con-ciencia-running-brewer-john> (referer: https://www.feriachilenadellibro.cl/deportes?product_list_mode=list)
+2018-12-02 13:54:14 [scrapy.core.scraper] ERROR: Error processing {'autor': ['BREWER'],
+ 'autorId': 6,
+ 'categoriaDestinoId': 3,
+ 'codigoISBN': ['0857628151'],
+ 'codigoISBNId': 5,
+ 'codigoSKU': ['316145'],
+ 'codigoSKUId': 6,
+ 'descripcionProducto': [],
+ 'editorial': ['QUARTO'],
+ 'editorialId': 8,
+ 'encuadernacion': ['Rústico'],
+ 'encuadernacionId': 7,
+ 'medidaValor': 'Unidad',
+ 'nombreProducto': ['DEPORTE CON CIENCIA RUNNING'],
+ 'precioId': 3,
+ 'tipoPrecio': 'Internet',
+ 'tipoProducto': 'Libros',
+ 'unidadId': 3,
+ 'valorPrecio': ['$17.100']}
+Traceback (most recent call last):
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\SVCPartners006\Downloads\Django-Scrapy\scrapy_app\scrapy_app\pipelines.py", line 29, in process_item
+    precio.save()
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 718, in save
+    force_update=force_update, update_fields=update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 748, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 831, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 869, in _do_insert
+    using=using, raw=raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\query.py", line 1136, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1288, in execute_sql
+    for sql, params in self.as_sql():
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in as_sql
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in <listcomp>
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1240, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1182, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 790, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 785, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 1807, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
+2018-12-02 13:54:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.feriachilenadellibro.cl/deportes/deporte-con-ciencia-ciclismo-glaskin-max> (referer: https://www.feriachilenadellibro.cl/deportes?product_list_mode=list)
+2018-12-02 13:54:15 [scrapy.core.scraper] ERROR: Error processing {'autor': ['GLASKIN'],
+ 'autorId': 6,
+ 'categoriaDestinoId': 3,
+ 'codigoISBN': ['085762816X'],
+ 'codigoISBNId': 5,
+ 'codigoSKU': ['316146'],
+ 'codigoSKUId': 6,
+ 'descripcionProducto': [],
+ 'editorial': ['QUARTO'],
+ 'editorialId': 8,
+ 'encuadernacion': ['Rústico'],
+ 'encuadernacionId': 7,
+ 'medidaValor': 'Unidad',
+ 'nombreProducto': ['DEPORTE CON CIENCIA CICLISMO'],
+ 'precioId': 3,
+ 'tipoPrecio': 'Internet',
+ 'tipoProducto': 'Libros',
+ 'unidadId': 3,
+ 'valorPrecio': ['$17.100']}
+Traceback (most recent call last):
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\SVCPartners006\Downloads\Django-Scrapy\scrapy_app\scrapy_app\pipelines.py", line 29, in process_item
+    precio.save()
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 718, in save
+    force_update=force_update, update_fields=update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 748, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 831, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 869, in _do_insert
+    using=using, raw=raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\query.py", line 1136, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1288, in execute_sql
+    for sql, params in self.as_sql():
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in as_sql
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in <listcomp>
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1240, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1182, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 790, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 785, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 1807, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
+2018-12-02 13:54:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.feriachilenadellibro.cl/deportes/trucos-y-sugerencias-para-la-pesca-y-su-entorno> (referer: https://www.feriachilenadellibro.cl/deportes?product_list_mode=list)
+2018-12-02 13:54:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.feriachilenadellibro.cl/deportes/futbol-iq> (referer: https://www.feriachilenadellibro.cl/deportes?product_list_mode=list)
+2018-12-02 13:54:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.feriachilenadellibro.cl/deportes/el-libro-del-chi-kung-reid-daniel> (referer: https://www.feriachilenadellibro.cl/deportes?product_list_mode=list)
+2018-12-02 13:54:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.feriachilenadellibro.cl/deportes/manual-completo-de-la-bicicleta> (referer: https://www.feriachilenadellibro.cl/deportes?product_list_mode=list)
+2018-12-02 13:54:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.feriachilenadellibro.cl/deportes/futbol-garcia-marcela> (referer: https://www.feriachilenadellibro.cl/deportes?product_list_mode=list)
+2018-12-02 13:54:16 [scrapy.core.scraper] ERROR: Error processing {'autor': ['ROMÁN FERNÁNDEZ EMILIO'],
+ 'autorId': 6,
+ 'categoriaDestinoId': 3,
+ 'codigoISBN': ['9788479021672'],
+ 'codigoISBNId': 5,
+ 'codigoSKU': ['286451'],
+ 'codigoSKUId': 6,
+ 'descripcionProducto': ['Libro ameno lleno de prácticos consejos. Se '
+                         'convertirá en un libro de consulta siempre que salga '
+                         'a practicar su deporte favorito ayudándole a mejorar '
+                         'los resultados de sus lances." (Caza y pesca.)'],
+ 'editorial': ['TUTOR'],
+ 'editorialId': 8,
+ 'encuadernacion': ['Rústico'],
+ 'encuadernacionId': 7,
+ 'medidaValor': 'Unidad',
+ 'nombreProducto': ['TRUCOS Y SUGERENCIAS PARA LA PESCA Y SU ENTORNO'],
+ 'precioId': 3,
+ 'tipoPrecio': 'Internet',
+ 'tipoProducto': 'Libros',
+ 'unidadId': 3,
+ 'valorPrecio': ['$14.250']}
+Traceback (most recent call last):
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\SVCPartners006\Downloads\Django-Scrapy\scrapy_app\scrapy_app\pipelines.py", line 29, in process_item
+    precio.save()
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 718, in save
+    force_update=force_update, update_fields=update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 748, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 831, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 869, in _do_insert
+    using=using, raw=raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\query.py", line 1136, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1288, in execute_sql
+    for sql, params in self.as_sql():
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in as_sql
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in <listcomp>
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1240, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1182, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 790, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 785, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 1807, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
+2018-12-02 13:54:17 [scrapy.core.scraper] ERROR: Error processing {'autor': ['BLANK DAN'],
+ 'autorId': 6,
+ 'categoriaDestinoId': 3,
+ 'codigoISBN': ['9788416676293'],
+ 'codigoISBNId': 5,
+ 'codigoSKU': ['276620'],
+ 'codigoSKUId': 6,
+ 'descripcionProducto': ['Para un aprendizaje más efectivo del fútbol. Este es '
+                         'el primer libro escrito específicamente para '
+                         'jugadores, con un lenguaje comprensible y de lectura '
+                         'entretenida y rápida, ofrece soluciones sencillas a '
+                         'los errores y problemas más comunes en el fútbol. '
+                         'Aporta, además, recursos tácticos y estrategias para '
+                         'ayudar a los jugadores jóvenes a pensar y '
+                         'convertirles en futbolistas inteligentes. Su autor, '
+                         'Dan Blank, tiene más de 20 años de experiencia como '
+                         'entrenador y ha catalogado los errores y problemas '
+                         'más comunes del fútbol ofreciendo soluciones '
+                         'sencillas. El libro es un compendio de las '
+                         'decisiones futbolísticas inteligentes destinadas a '
+                         'allanar el camino del aprendizaje y a mejorar el '
+                         'resultado de los equipos. Blank explica de modo '
+                         'coloquial y sin tecnicismos lo que ha “soportado” en '
+                         'años de estrés entrenando.'],
+ 'editorial': ['TUTOR'],
+ 'editorialId': 8,
+ 'encuadernacion': ['Rústico'],
+ 'encuadernacionId': 7,
+ 'medidaValor': 'Unidad',
+ 'nombreProducto': ['FÚTBOL IQ'],
+ 'precioId': 3,
+ 'tipoPrecio': 'Internet',
+ 'tipoProducto': 'Libros',
+ 'unidadId': 3,
+ 'valorPrecio': ['$16.625']}
+Traceback (most recent call last):
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\SVCPartners006\Downloads\Django-Scrapy\scrapy_app\scrapy_app\pipelines.py", line 29, in process_item
+    precio.save()
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 718, in save
+    force_update=force_update, update_fields=update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 748, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 831, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 869, in _do_insert
+    using=using, raw=raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\query.py", line 1136, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1288, in execute_sql
+    for sql, params in self.as_sql():
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in as_sql
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in <listcomp>
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1240, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1182, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 790, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 785, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 1807, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
+2018-12-02 13:54:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.feriachilenadellibro.cl/deportes/mas-que-un-equipo-todo-un-pueblo-club-deportivo-palestino> (referer: https://www.feriachilenadellibro.cl/deportes?product_list_mode=list)
+2018-12-02 13:54:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.feriachilenadellibro.cl/deportes/anatomia-del-pilates> (referer: https://www.feriachilenadellibro.cl/deportes?product_list_mode=list)
+2018-12-02 13:54:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.feriachilenadellibro.cl/deportes/diccionario-de-las-artes-marciales-ory-m-> (referer: https://www.feriachilenadellibro.cl/deportes?product_list_mode=list)
+2018-12-02 13:54:19 [scrapy.core.scraper] ERROR: Error processing {'autor': ['REID'],
+ 'autorId': 6,
+ 'categoriaDestinoId': 3,
+ 'codigoISBN': ['8479533110'],
+ 'codigoISBNId': 5,
+ 'codigoSKU': ['127523'],
+ 'codigoSKUId': 6,
+ 'descripcionProducto': [],
+ 'editorial': ['Rústico'],
+ 'editorialId': 8,
+ 'encuadernacion': [],
+ 'encuadernacionId': 7,
+ 'medidaValor': 'Unidad',
+ 'nombreProducto': ['EL LIBRO DEL CHI-KUNG'],
+ 'precioId': 3,
+ 'tipoPrecio': 'Internet',
+ 'tipoProducto': 'Libros',
+ 'unidadId': 3,
+ 'valorPrecio': ['$16.283']}
+Traceback (most recent call last):
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\SVCPartners006\Downloads\Django-Scrapy\scrapy_app\scrapy_app\pipelines.py", line 29, in process_item
+    precio.save()
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 718, in save
+    force_update=force_update, update_fields=update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 748, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 831, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 869, in _do_insert
+    using=using, raw=raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\query.py", line 1136, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1288, in execute_sql
+    for sql, params in self.as_sql():
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in as_sql
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in <listcomp>
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1240, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1182, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 790, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 785, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 1807, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
+2018-12-02 13:54:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.feriachilenadellibro.cl/deportes/la-batalla-de-las-pioneras-retamal-rodrigo> (referer: https://www.feriachilenadellibro.cl/deportes?product_list_mode=list)
+2018-12-02 13:54:20 [scrapy.core.scraper] ERROR: Error processing {'autor': ['autor'],
+ 'autorId': 6,
+ 'categoriaDestinoId': 3,
+ 'codigoISBN': ['9789563500936'],
+ 'codigoISBNId': 5,
+ 'codigoSKU': ['322735'],
+ 'codigoSKUId': 6,
+ 'descripcionProducto': ['El Manual completo de la bicicleta es la guía más '
+                         'completa para mantener y reparar todo tipo de '
+                         'bicicletas en sencillos pasos. Increíbles '
+                         'ilustraciones en 3D y fotografías muestran con todo '
+                         'detalle los aspectos técnicos necesarios para '
+                         'mantener en perfectas condiciones una bicicleta. '
+                         'Aprender a reparar una cadena, ajustar la suspensión '
+                         'o reemplazar los cables de los frenos será mucho más '
+                         'fácil con este manual, sin necesidad de tener '
+                         'conocimientos profesionales. La biblia que todo '
+                         'aficionado al ciclismo debería tener en su '
+                         'estantería.'],
+ 'editorial': ['DK'],
+ 'editorialId': 8,
+ 'encuadernacion': ['Tapa Dura'],
+ 'encuadernacionId': 7,
+ 'medidaValor': 'Unidad',
+ 'nombreProducto': ['MANUAL COMPLETO DE LA BICICLETA'],
+ 'precioId': 3,
+ 'tipoPrecio': 'Internet',
+ 'tipoProducto': 'Libros',
+ 'unidadId': 3,
+ 'valorPrecio': ['$22.791']}
+Traceback (most recent call last):
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\SVCPartners006\Downloads\Django-Scrapy\scrapy_app\scrapy_app\pipelines.py", line 29, in process_item
+    precio.save()
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 718, in save
+    force_update=force_update, update_fields=update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 748, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 831, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 869, in _do_insert
+    using=using, raw=raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\query.py", line 1136, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1288, in execute_sql
+    for sql, params in self.as_sql():
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in as_sql
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in <listcomp>
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1240, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1182, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 790, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 785, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 1807, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
+2018-12-02 13:54:21 [scrapy.core.scraper] ERROR: Error processing {'autor': ['GARCIA MARCELA'],
+ 'autorId': 6,
+ 'categoriaDestinoId': 3,
+ 'codigoISBN': ['9789500205115'],
+ 'codigoISBNId': 5,
+ 'codigoSKU': ['212363'],
+ 'codigoSKUId': 6,
+ 'descripcionProducto': [],
+ 'editorial': ['EL ATENEO'],
+ 'editorialId': 8,
+ 'encuadernacion': ['Tapa Dura'],
+ 'encuadernacionId': 7,
+ 'medidaValor': 'Unidad',
+ 'nombreProducto': ['FUTBOL'],
+ 'precioId': 3,
+ 'tipoPrecio': 'Internet',
+ 'tipoProducto': 'Libros',
+ 'unidadId': 3,
+ 'valorPrecio': ['$45.220']}
+Traceback (most recent call last):
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\SVCPartners006\Downloads\Django-Scrapy\scrapy_app\scrapy_app\pipelines.py", line 29, in process_item
+    precio.save()
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 718, in save
+    force_update=force_update, update_fields=update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 748, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 831, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 869, in _do_insert
+    using=using, raw=raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\query.py", line 1136, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1288, in execute_sql
+    for sql, params in self.as_sql():
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in as_sql
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in <listcomp>
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1240, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1182, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 790, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 785, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 1807, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
+2018-12-02 13:54:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.feriachilenadellibro.cl/deportes/veleros-volvo-ocean-race-siete-barcos-contra-el-mundo> (referer: https://www.feriachilenadellibro.cl/deportes?product_list_mode=list)
+2018-12-02 13:54:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.feriachilenadellibro.cl/deportes/taijiquan-24-y-48-posiciones-y-sus-aplicaciones-marciales-shou-yu-we-ching> (referer: https://www.feriachilenadellibro.cl/deportes?product_list_mode=list)
+2018-12-02 13:54:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.feriachilenadellibro.cl/deportes/elementos-estructurales-del-vehiculo> (referer: https://www.feriachilenadellibro.cl/deportes?product_list_mode=list)
+2018-12-02 13:54:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.feriachilenadellibro.cl/deportes/circuitos-electricos-auxiliares-del-vehiculo> (referer: https://www.feriachilenadellibro.cl/deportes?product_list_mode=list)
+2018-12-02 13:54:22 [scrapy.core.scraper] ERROR: Error processing {'autor': ['CLUB DEPORTIVO PALESTINO'],
+ 'autorId': 6,
+ 'categoriaDestinoId': 3,
+ 'codigoISBN': ['isbn'],
+ 'codigoISBNId': 5,
+ 'codigoSKU': ['322827'],
+ 'codigoSKUId': 6,
+ 'descripcionProducto': ['“Este es el libro de un equipo de fútbol más '
+                         'completo de Chile. Tiene a todos los jugadores con '
+                         'nombre y apellido y todas las estadísticas. '
+                         'Recuperamos todos los grandes hitos y las grandes '
+                         'historias”.'],
+ 'editorial': ['Tapa Dura'],
+ 'editorialId': 8,
+ 'encuadernacion': [],
+ 'encuadernacionId': 7,
+ 'medidaValor': 'Unidad',
+ 'nombreProducto': ['MAS QUE UN EQUIPO TODO UN PUEBLO CLUB DEPORTIVO '
+                    'PALESTINO'],
+ 'precioId': 3,
+ 'tipoPrecio': 'Internet',
+ 'tipoProducto': 'Libros',
+ 'unidadId': 3,
+ 'valorPrecio': ['$38.000']}
+Traceback (most recent call last):
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\SVCPartners006\Downloads\Django-Scrapy\scrapy_app\scrapy_app\pipelines.py", line 29, in process_item
+    precio.save()
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 718, in save
+    force_update=force_update, update_fields=update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 748, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 831, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 869, in _do_insert
+    using=using, raw=raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\query.py", line 1136, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1288, in execute_sql
+    for sql, params in self.as_sql():
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in as_sql
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in <listcomp>
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1240, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1182, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 790, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 785, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 1807, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
+2018-12-02 13:54:23 [scrapy.core.scraper] ERROR: Error processing {'autor': ['ORY M. '],
+ 'autorId': 6,
+ 'categoriaDestinoId': 3,
+ 'codigoISBN': ['9788477203728'],
+ 'codigoISBNId': 5,
+ 'codigoSKU': ['166428'],
+ 'codigoSKUId': 6,
+ 'descripcionProducto': [],
+ 'editorial': ['OBELISCO'],
+ 'editorialId': 8,
+ 'encuadernacion': ['Rústico'],
+ 'encuadernacionId': 7,
+ 'medidaValor': 'Unidad',
+ 'nombreProducto': ['DICCIONARIO DE LAS ARTES MARCIALES'],
+ 'precioId': 3,
+ 'tipoPrecio': 'Internet',
+ 'tipoProducto': 'Libros',
+ 'unidadId': 3,
+ 'valorPrecio': ['$14.136']}
+Traceback (most recent call last):
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\SVCPartners006\Downloads\Django-Scrapy\scrapy_app\scrapy_app\pipelines.py", line 29, in process_item
+    precio.save()
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 718, in save
+    force_update=force_update, update_fields=update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 748, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 831, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 869, in _do_insert
+    using=using, raw=raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\query.py", line 1136, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1288, in execute_sql
+    for sql, params in self.as_sql():
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in as_sql
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in <listcomp>
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1240, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1182, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 790, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 785, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 1807, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
+2018-12-02 13:54:24 [scrapy.core.scraper] ERROR: Error processing {'autor': ['ELLSWORTH, ABBY'],
+ 'autorId': 6,
+ 'categoriaDestinoId': 3,
+ 'codigoISBN': ['9788425520815'],
+ 'codigoISBNId': 5,
+ 'codigoSKU': ['252870'],
+ 'codigoSKUId': 6,
+ 'descripcionProducto': ['Esta obra te introduce en una nueva dimensión de '
+                         'este sistema de ejercicios de fama universal que '
+                         'desarrolla la sinergia muscular y el alineamiento '
+                         'corporal. Las fotografías e ilustraciones muestran '
+                         'cuáles son los músculos principales que trabajan en '
+                         'cada ejercicio. Las instrucciones paso a paso de '
+                         'cada movimiento, así como los ejercicios apropiados '
+                         'para los distintos niveles -principiante, iniciado y '
+                         'avanzado-, te ayudarán a conseguir un cuerpo fuerte '
+                         'y en forma.'],
+ 'editorial': ['HISPANO EUROPEA'],
+ 'editorialId': 8,
+ 'encuadernacion': ['Rústico'],
+ 'encuadernacionId': 7,
+ 'medidaValor': 'Unidad',
+ 'nombreProducto': ['ANATOMIA DEL PILATES'],
+ 'precioId': 3,
+ 'tipoPrecio': 'Internet',
+ 'tipoProducto': 'Libros',
+ 'unidadId': 3,
+ 'valorPrecio': ['$25.840']}
+Traceback (most recent call last):
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\SVCPartners006\Downloads\Django-Scrapy\scrapy_app\scrapy_app\pipelines.py", line 29, in process_item
+    precio.save()
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 718, in save
+    force_update=force_update, update_fields=update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 748, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 831, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 869, in _do_insert
+    using=using, raw=raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\query.py", line 1136, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1288, in execute_sql
+    for sql, params in self.as_sql():
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in as_sql
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in <listcomp>
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1240, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1182, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 790, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 785, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 1807, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
+2018-12-02 13:54:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.feriachilenadellibro.cl/deportes/elementos-fijos-5-edicion> (referer: https://www.feriachilenadellibro.cl/deportes?product_list_mode=list)
+2018-12-02 13:54:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.feriachilenadellibro.cl/deportes/barrio-bravo-mundial-roberto-melendez> (referer: https://www.feriachilenadellibro.cl/deportes?product_list_mode=list)
+2018-12-02 13:54:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.feriachilenadellibro.cl/deportes/marcelo-bielsa-el-dia-que-todo-cambio-luis-gaston-mora> (referer: https://www.feriachilenadellibro.cl/deportes?product_list_mode=list)
+2018-12-02 13:54:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.feriachilenadellibro.cl/deportes/heros-cristian-arcos> (referer: https://www.feriachilenadellibro.cl/deportes?product_list_mode=list)
+2018-12-02 13:54:25 [scrapy.core.scraper] ERROR: Error processing {'autor': ['RETAMAL'],
+ 'autorId': 6,
+ 'categoriaDestinoId': 3,
+ 'codigoISBN': ['9569641231'],
+ 'codigoISBNId': 5,
+ 'codigoSKU': ['303214'],
+ 'codigoSKUId': 6,
+ 'descripcionProducto': [],
+ 'editorial': ['Rústico'],
+ 'editorialId': 8,
+ 'encuadernacion': [],
+ 'encuadernacionId': 7,
+ 'medidaValor': 'Unidad',
+ 'nombreProducto': ['LA BATALLA DE LAS PIONERAS '],
+ 'precioId': 3,
+ 'tipoPrecio': 'Internet',
+ 'tipoProducto': 'Libros',
+ 'unidadId': 3,
+ 'valorPrecio': ['$6.213']}
+Traceback (most recent call last):
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\SVCPartners006\Downloads\Django-Scrapy\scrapy_app\scrapy_app\pipelines.py", line 29, in process_item
+    precio.save()
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 718, in save
+    force_update=force_update, update_fields=update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 748, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 831, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 869, in _do_insert
+    using=using, raw=raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\query.py", line 1136, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1288, in execute_sql
+    for sql, params in self.as_sql():
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in as_sql
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in <listcomp>
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1240, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1182, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 790, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 785, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 1807, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
+2018-12-02 13:54:26 [scrapy.core.scraper] ERROR: Error processing {'autor': [' -'],
+ 'autorId': 6,
+ 'categoriaDestinoId': 3,
+ 'codigoISBN': ['1234'],
+ 'codigoISBNId': 5,
+ 'codigoSKU': ['303199'],
+ 'codigoSKUId': 6,
+ 'descripcionProducto': [],
+ 'editorial': ['Rústico'],
+ 'editorialId': 8,
+ 'encuadernacion': [],
+ 'encuadernacionId': 7,
+ 'medidaValor': 'Unidad',
+ 'nombreProducto': ['VELEROS / VOLVO OCEAN RACE SIETE BARCOS CONTRA EL MUNDO'],
+ 'precioId': 3,
+ 'tipoPrecio': 'Internet',
+ 'tipoProducto': 'Libros',
+ 'unidadId': 3,
+ 'valorPrecio': ['$5.700']}
+Traceback (most recent call last):
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\SVCPartners006\Downloads\Django-Scrapy\scrapy_app\scrapy_app\pipelines.py", line 29, in process_item
+    precio.save()
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 718, in save
+    force_update=force_update, update_fields=update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 748, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 831, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 869, in _do_insert
+    using=using, raw=raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\query.py", line 1136, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1288, in execute_sql
+    for sql, params in self.as_sql():
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in as_sql
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in <listcomp>
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1240, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1182, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 790, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 785, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 1807, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
+2018-12-02 13:54:27 [scrapy.core.scraper] ERROR: Error processing {'autor': ['SHOU-YU / WE-CHING'],
+ 'autorId': 6,
+ 'categoriaDestinoId': 3,
+ 'codigoISBN': ['8478084088'],
+ 'codigoISBNId': 5,
+ 'codigoSKU': ['167402'],
+ 'codigoSKUId': 6,
+ 'descripcionProducto': [],
+ 'editorial': ['Rústico'],
+ 'editorialId': 8,
+ 'encuadernacion': [],
+ 'encuadernacionId': 7,
+ 'medidaValor': 'Unidad',
+ 'nombreProducto': ['TAIJIQUAN / 24 Y 48 POSICIONES Y SUS APLICACIONES '
+                    'MARCIALES'],
+ 'precioId': 3,
+ 'tipoPrecio': 'Internet',
+ 'tipoProducto': 'Libros',
+ 'unidadId': 3,
+ 'valorPrecio': ['$23.712']}
+Traceback (most recent call last):
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\SVCPartners006\Downloads\Django-Scrapy\scrapy_app\scrapy_app\pipelines.py", line 29, in process_item
+    precio.save()
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 718, in save
+    force_update=force_update, update_fields=update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 748, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 831, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 869, in _do_insert
+    using=using, raw=raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\query.py", line 1136, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1288, in execute_sql
+    for sql, params in self.as_sql():
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in as_sql
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in <listcomp>
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1240, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1182, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 790, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 785, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 1807, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
+2018-12-02 13:54:28 [scrapy.core.scraper] ERROR: Error processing {'autor': ['ALOSO PEREZ JOSE MANUEL'],
+ 'autorId': 6,
+ 'categoriaDestinoId': 3,
+ 'codigoISBN': ['9788428335379'],
+ 'codigoISBNId': 5,
+ 'codigoSKU': ['253081'],
+ 'codigoSKUId': 6,
+ 'descripcionProducto': ['El presente libro aborda los contenidos del módulo '
+                         'profesional de Circuitos Eléctricos Auxiliares del '
+                         'Vehículo, del Ciclo Formativo de grado medio '
+                         'correspondiente al título de Técnico en '
+                         'Electromecánica de Vehículos Automóviles, de la '
+                         'familia de Transporte y Mantenimiento de Vehículos, '
+                         'establecido por el Real Decreto 453/2010, de 16 de '
+                         'abril. Para esta nueva edición se ha llevado a cabo '
+                         'una actualización de todos los contenidos al incluir '
+                         'los más recientes sistemas y tecnologías aplicados a '
+                         'los automóviles, además de numerosas ilustraciones '
+                         'que facilitan la comprensión de los conceptos. '
+                         'Asimismo, como en ediciones anteriores, se describen '
+                         'minuciosamente los sistemas de alumbrado y '
+                         'maniobras, así como los diversos sistemas eléctricos '
+                         'auxiliares de los automóviles actuales, a través del '
+                         'análisis de la estructura y el funcionamiento de los '
+                         'mismos y de los procesos de verificación y control. '
+                         'Gracias a ello se llega con facilidad a la detección '
+                         'de las posibles averías y se determinan las causas '
+                         'que las producen, lo que permite realizar con '
+                         'fiabilidad las pertinentes reparaciones. Todas estas '
+                         'características hacen del libro una perfecta '
+                         'herramienta de enseñanza y aprendizaje para el '
+                         'módulo de Circuitos Eléctricos Auxiliares del '
+                         'Vehículo.'],
+ 'editorial': ['PARANINFO'],
+ 'editorialId': 8,
+ 'encuadernacion': ['Rústico'],
+ 'encuadernacionId': 7,
+ 'medidaValor': 'Unidad',
+ 'nombreProducto': ['CIRCUITOS ELÉCTRICOS AUXILIARES DEL VEHÍCULO'],
+ 'precioId': 3,
+ 'tipoPrecio': 'Internet',
+ 'tipoProducto': 'Libros',
+ 'unidadId': 3,
+ 'valorPrecio': ['$13.680']}
+Traceback (most recent call last):
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\SVCPartners006\Downloads\Django-Scrapy\scrapy_app\scrapy_app\pipelines.py", line 29, in process_item
+    precio.save()
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 718, in save
+    force_update=force_update, update_fields=update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 748, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 831, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 869, in _do_insert
+    using=using, raw=raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\query.py", line 1136, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1288, in execute_sql
+    for sql, params in self.as_sql():
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in as_sql
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in <listcomp>
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1240, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1182, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 790, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 785, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 1807, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
+2018-12-02 13:54:29 [scrapy.core.scraper] ERROR: Error processing {'autor': ['VARIOS AUTORES'],
+ 'autorId': 6,
+ 'categoriaDestinoId': 3,
+ 'codigoISBN': ['9788428338417'],
+ 'codigoISBNId': 5,
+ 'codigoSKU': ['287025'],
+ 'codigoSKUId': 6,
+ 'descripcionProducto': ['Este libro desarrolla los contenidos del módulo '
+                         'profesional de Elementos Estructurales del Vehículo '
+                         'del Ciclo Formativo de grado medio de Carrocería, '
+                         'perteneciente a la familia profesional de Transporte '
+                         'y Mantenimiento de Vehículos. Además, en su '
+                         'elaboración se han tenido en cuenta las '
+                         'Cualificaciones y las Unidades de Competencia del '
+                         'Catálogo Nacional de Cualificaciones Profesionales '
+                         'incluidas en dicho título. La obra se estructura en '
+                         'los siguientes bloques temáticos:',
+                         '• Concepción, diseño y fabricación de una '
+                         'carrocería.',
+                         '• Características constructivas y estructurales de '
+                         'la carrocería.',
+                         '• Plan de seguridad pasiva.',
+                         '• Análisis de los efectos de un golpe en un '
+                         'vehículo.',
+                         '• Diagnóstico y reparación de vehículos sobre '
+                         'bancadas.',
+                         'En primer lugar se analizan y describen los '
+                         'procedimientos habituales utilizados en la génesis '
+                         'del nuevo modelo mediante un estudio detallado de la '
+                         'secuencia operativa, que tiene lugar desde los '
+                         'cálculos preliminares de viabilidad del diseño hasta '
+                         'la entrada en el proceso de producción en serie del '
+                         'vehículo. A continuación, se describen las '
+                         'características constructivas y los materiales más '
+                         'novedosos utilizados en la construcción de '
+                         'carrocerías, lo que se complementa posteriormente '
+                         'con el estudio estructural de estas y el plan de '
+                         'seguridad pasiva, en el que se realiza un estudio '
+                         'pormenorizado de las pruebas de choque (crash '
+                         'tests). Seguidamente se aborda la teoría de la '
+                         'colisión, para lo que se realiza un análisis '
+                         'exhaustivo de los efectos de una colisión sobre la '
+                         'carrocería y un estudio de los distintos sistemas de '
+                         'fuerzas con el fin de entender su comportamiento '
+                         'después de un impacto. A continuación, se describe '
+                         'el equipamiento necesario para realizar las '
+                         'reparaciones de la estructura de la carrocería y los '
+                         'distintos sistemas de diagnóstico de daños '
+                         'estructurales, desde el más elemental hasta los '
+                         'sistemas informatizados más novedosos, teniendo como '
+                         'base los datos técnicos proporcionados por los '
+                         'fabricantes de vehículos y los constructores de los '
+                         'equipos de diagnóstico. Por último, se indican de '
+                         'manera pormenorizada los pasos que hay que seguir '
+                         'para la reparación de la carrocería en la bancada y '
+                         'se describen las tensiones y las sobretensiones que '
+                         'se pueden producir en el transcurso de la '
+                         'reparación. Dado el espíritu altamente didáctico que '
+                         'ha guiado la preparación de esta obra, el contenido '
+                         'de esta nueva edición incluye las innovaciones más '
+                         'recientes en este campo, que se desarrollan con un '
+                         'lenguaje claro y preciso apoyado en un gran número '
+                         'de gráficos, dibujos y fotografías; ello favorece la '
+                         'fácil y rápida comprensión de las cuestiones que se '
+                         'abordan para que el lector alcance sin dificultad la '
+                         'capacidad necesaria en esta interesante materia. '
+                         'Asimismo, al final de cada unidad se incluye un '
+                         'apartado de Cuestiones y de Actividades propuestas '
+                         'que permitirán al alumno poner a prueba lo '
+                         'aprendido, además de repasar y fijar sus '
+                         'conocimientos para cerrar convenientemente el '
+                         'estudio de cada unidad. Los autores, profesores de '
+                         'Formación Profesional, poseen una amplia experiencia '
+                         'en la docencia y la investigación y actualmente '
+                         'trabajan como profesores de Ciclos Formativos de la '
+                         'familia profesional de Transporte y Mantenimiento de '
+                         'Vehículos. Además, son autores de otras obras '
+                         'dirigidas a la formación en este ámbito publicadas '
+                         'por esta editorial.'],
+ 'editorial': ['PARANINFO'],
+ 'editorialId': 8,
+ 'encuadernacion': ['Rústico'],
+ 'encuadernacionId': 7,
+ 'medidaValor': 'Unidad',
+ 'nombreProducto': ['ELEMENTOS ESTRUCTURALES DEL VEHICULO'],
+ 'precioId': 3,
+ 'tipoPrecio': 'Internet',
+ 'tipoProducto': 'Libros',
+ 'unidadId': 3,
+ 'valorPrecio': ['$28.310']}
+Traceback (most recent call last):
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\SVCPartners006\Downloads\Django-Scrapy\scrapy_app\scrapy_app\pipelines.py", line 29, in process_item
+    precio.save()
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 718, in save
+    force_update=force_update, update_fields=update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 748, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 831, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 869, in _do_insert
+    using=using, raw=raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\query.py", line 1136, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1288, in execute_sql
+    for sql, params in self.as_sql():
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in as_sql
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in <listcomp>
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1240, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1182, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 790, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 785, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 1807, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
+2018-12-02 13:54:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.feriachilenadellibro.cl/deportes/guia-de-estiramientos> (referer: https://www.feriachilenadellibro.cl/deportes?product_list_mode=list)
+2018-12-02 13:54:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.feriachilenadellibro.cl/deportes/el-libro-de-la-bicicleta> (referer: https://www.feriachilenadellibro.cl/deportes?product_list_mode=list)
+2018-12-02 13:54:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.feriachilenadellibro.cl/deportes/circuitos-de-fluidos-suspension-y-direccion> (referer: https://www.feriachilenadellibro.cl/deportes?product_list_mode=list)
+2018-12-02 13:54:30 [scrapy.core.scraper] ERROR: Error processing {'autor': ['MORA OBREGON, LUIS'],
+ 'autorId': 6,
+ 'categoriaDestinoId': 3,
+ 'codigoISBN': ['9789563383706'],
+ 'codigoISBNId': 5,
+ 'codigoSKU': ['295660'],
+ 'codigoSKUId': 6,
+ 'descripcionProducto': ['“Yo humanamente, me nutrí de la sabiduría del pueblo '
+                         'chileno. Tengo admiración por el ciudadano medio de '
+                         'Chile y por la fortaleza de sus trabajadores. '
+                         'Abonaron mi forma de interpretar lo que es el '
+                         'sacrificio. Considero mis tres años y medio en Chile '
+                         'como un regalo de la vida. Aprendí a amar la vida '
+                         'estando aquí. A los futboleros y, si se me permite, '
+                         'a los chilenos en general, quiero decirles ‘muchas '
+                         'gracias’”.'],
+ 'editorial': ['EDITORIAL FORJA'],
+ 'editorialId': 8,
+ 'encuadernacion': ['Rústico'],
+ 'encuadernacionId': 7,
+ 'medidaValor': 'Unidad',
+ 'nombreProducto': ['MARCELO BIELSA EL DIA QUE TODO CAMBIO'],
+ 'precioId': 3,
+ 'tipoPrecio': 'Internet',
+ 'tipoProducto': 'Libros',
+ 'unidadId': 3,
+ 'valorPrecio': ['$9.680']}
+Traceback (most recent call last):
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\SVCPartners006\Downloads\Django-Scrapy\scrapy_app\scrapy_app\pipelines.py", line 29, in process_item
+    precio.save()
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 718, in save
+    force_update=force_update, update_fields=update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 748, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 831, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 869, in _do_insert
+    using=using, raw=raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\query.py", line 1136, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1288, in execute_sql
+    for sql, params in self.as_sql():
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in as_sql
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in <listcomp>
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1240, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1182, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 790, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 785, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 1807, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
+2018-12-02 13:54:31 [scrapy.core.scraper] ERROR: Error processing {'autor': ['ARCOS, CRISTIAN'],
+ 'autorId': 6,
+ 'categoriaDestinoId': 3,
+ 'codigoISBN': ['9789563604665'],
+ 'codigoISBNId': 5,
+ 'codigoSKU': ['267955'],
+ 'codigoSKUId': 6,
+ 'descripcionProducto': ['Millones de dólares, autos lujosos, ansiones, viajes '
+                         'en primera clase y las portadas de los medios son '
+                         'parte del día a día de aquellos futbolistas que han '
+                         'conseguido alzar copas en las ligas estelares del '
+                         'mundo. Pero hay otras realidades, igual de '
+                         'apasionantes y emotivas, que disfrutamos y sufrimos '
+                         'cotidianamente. Ídolos a los que la gloria les fue '
+                         'negada o que renunciaron a ella, equipos que viven '
+                         'coqueteando con el descenso, hinchadas sufridas y '
+                         'barriales interminables son algunos de los '
+                         'protagonistas de Héroes, el libro más emotivo y '
+                         'personal de Cristián Arcos, en el que nos narra '
+                         'vidas y muertes cercanas, que no llegan a los '
+                         'diarios o canales más importantes, pero que portan '
+                         'el fuego sagrado del fútbol. Héroes es un libro '
+                         'imprescindible para el chicha verdadero del fútbol, '
+                         'pues, como dijo alguna vez Marcelo Bielsa, el éxito '
+                         'es una excepción. Justamente de eso trata este '
+                         'emocionante texto de Cristian Arcos. \xa0'],
+ 'editorial': ['PLANETA'],
+ 'editorialId': 8,
+ 'encuadernacion': ['Rústico'],
+ 'encuadernacionId': 7,
+ 'medidaValor': 'Unidad',
+ 'nombreProducto': ['HEROES'],
+ 'precioId': 3,
+ 'tipoPrecio': 'Internet',
+ 'tipoProducto': 'Libros',
+ 'unidadId': 3,
+ 'valorPrecio': ['$12.255']}
+Traceback (most recent call last):
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\SVCPartners006\Downloads\Django-Scrapy\scrapy_app\scrapy_app\pipelines.py", line 29, in process_item
+    precio.save()
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 718, in save
+    force_update=force_update, update_fields=update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 748, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 831, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 869, in _do_insert
+    using=using, raw=raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\query.py", line 1136, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1288, in execute_sql
+    for sql, params in self.as_sql():
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in as_sql
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in <listcomp>
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1240, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1182, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 790, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 785, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 1807, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
+2018-12-02 13:54:33 [scrapy.core.scraper] ERROR: Error processing {'autor': ['NAVARRO / GOMEZ / GARCIA / AGUEDA'],
+ 'autorId': 6,
+ 'categoriaDestinoId': 3,
+ 'codigoISBN': ['9788497327688'],
+ 'codigoISBNId': 5,
+ 'codigoSKU': ['253092'],
+ 'codigoSKUId': 6,
+ 'descripcionProducto': ['Este libro desarrolla todos los contenidos del '
+                         'módulo profesional de Elementos Fijos que se '
+                         'contemplan en el Real Decreto 176/2008 de 8 de '
+                         'febrero, por el que se establece el título de '
+                         'Técnico en Carrocería y se fijan sus enseñanzas '
+                         'mínimas. Está dirigido a los estudiantes que cursan '
+                         'el Ciclo Formativo de grado medio de Carrocería, '
+                         'perteneciente a la familia de Transporte y '
+                         'Mantenimiento de Vehículos, aunque también será de '
+                         'gran utilidad para los profesionales que deseen '
+                         'ampliar su formación. Con él, el usuario alcanzará '
+                         'un adecuado conocimiento de los materiales, de los '
+                         'medios y de los procedimientos de reparación de los '
+                         'elementos fijos que componen la carrocería de un '
+                         'automóvil.'],
+ 'editorial': ['PARANINFO'],
+ 'editorialId': 8,
+ 'encuadernacion': ['Rústico'],
+ 'encuadernacionId': 7,
+ 'medidaValor': 'Unidad',
+ 'nombreProducto': ['ELEMENTOS FIJOS 5ª EDICION'],
+ 'precioId': 3,
+ 'tipoPrecio': 'Internet',
+ 'tipoProducto': 'Libros',
+ 'unidadId': 3,
+ 'valorPrecio': ['$27.455']}
+Traceback (most recent call last):
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\SVCPartners006\Downloads\Django-Scrapy\scrapy_app\scrapy_app\pipelines.py", line 29, in process_item
+    precio.save()
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 718, in save
+    force_update=force_update, update_fields=update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 748, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 831, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 869, in _do_insert
+    using=using, raw=raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\query.py", line 1136, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1288, in execute_sql
+    for sql, params in self.as_sql():
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in as_sql
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in <listcomp>
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1240, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1182, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 790, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 785, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 1807, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
+2018-12-02 13:54:34 [scrapy.core.scraper] ERROR: Error processing {'autor': ['MELENDEZ, ROBERTO'],
+ 'autorId': 6,
+ 'categoriaDestinoId': 3,
+ 'codigoISBN': ['9789562625395'],
+ 'codigoISBNId': 5,
+ 'codigoSKU': ['294898'],
+ 'codigoSKUId': 6,
+ 'descripcionProducto': ['Un conjunto de relatos ambientados en las diversas '
+                         'copas del mundo. Por estas páginas desfilan Pelé, '
+                         'Maradona, Baggio, Ronaldo, Zidane y Suárez; pero '
+                         'también hay espacio —entre diversos personajes— para '
+                         'una futbolista de Nigeria, una monja fanática de la '
+                         'selección chilena, un delantero austriaco que se '
+                         'negó a jugar por la Alemania Nazi y un defensa '
+                         'africano que salvó la vida de sus compañeros. Barrio '
+                         'Bravo Mundial es una fotografía magistral de las '
+                         'grandes hazañas peloteras y, al mismo tiempo, un '
+                         'homenaje a los héroes anónimos detrás del '
+                         'espectáculo. Una obra adictiva y épica. Un regreso '
+                         'que confirma al autor como uno de los narradores de '
+                         'fútbol más rutilantes del momento.'],
+ 'editorial': ['SUDAMERICANA'],
+ 'editorialId': 8,
+ 'encuadernacion': ['Rústico'],
+ 'encuadernacionId': 7,
+ 'medidaValor': 'Unidad',
+ 'nombreProducto': ['BARRIO BRAVO MUNDIAL'],
+ 'precioId': 3,
+ 'tipoPrecio': 'Internet',
+ 'tipoProducto': 'Libros',
+ 'unidadId': 3,
+ 'valorPrecio': ['$11.400']}
+Traceback (most recent call last):
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\SVCPartners006\Downloads\Django-Scrapy\scrapy_app\scrapy_app\pipelines.py", line 29, in process_item
+    precio.save()
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 718, in save
+    force_update=force_update, update_fields=update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 748, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 831, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 869, in _do_insert
+    using=using, raw=raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\query.py", line 1136, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1288, in execute_sql
+    for sql, params in self.as_sql():
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in as_sql
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in <listcomp>
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1240, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1182, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 790, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 785, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 1807, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
+2018-12-02 13:54:35 [scrapy.core.scraper] ERROR: Error processing {'autor': ['CLEMENCEAU / DELAVIER / GUNDILL'],
+ 'autorId': 6,
+ 'categoriaDestinoId': 3,
+ 'codigoISBN': ['9788425520099'],
+ 'codigoISBNId': 5,
+ 'codigoSKU': ['221601'],
+ 'codigoSKUId': 6,
+ 'descripcionProducto': ['Estirarse es un gesto natural que mantiene la '
+                         'vitalidad y el bienestar. Instintivamente, la '
+                         'primera cosa que hacemos todos al levantarnos de la '
+                         'cama ¡es estirarnos! Más allá de su utilidad en la '
+                         'vida cotidiana y de la voluntad personal de '
+                         'mantenernos en forma, tonificados y con una buena '
+                         'movilidad, los estiramientos constituyen un '
+                         'excelente medio para aumentar el rendimiento '
+                         'deportivo. La flexibilidad, efectivamente, es un '
+                         'factor importante en la buena forma física.'],
+ 'editorial': ['HISPANO EUROPEA'],
+ 'editorialId': 8,
+ 'encuadernacion': ['Rústico'],
+ 'encuadernacionId': 7,
+ 'medidaValor': 'Unidad',
+ 'nombreProducto': ['GUIA DE ESTIRAMIENTOS'],
+ 'precioId': 3,
+ 'tipoPrecio': 'Internet',
+ 'tipoProducto': 'Libros',
+ 'unidadId': 3,
+ 'valorPrecio': ['$27.455']}
+Traceback (most recent call last):
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\SVCPartners006\Downloads\Django-Scrapy\scrapy_app\scrapy_app\pipelines.py", line 29, in process_item
+    precio.save()
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 718, in save
+    force_update=force_update, update_fields=update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 748, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 831, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 869, in _do_insert
+    using=using, raw=raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\query.py", line 1136, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1288, in execute_sql
+    for sql, params in self.as_sql():
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in as_sql
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in <listcomp>
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1240, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1182, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 790, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 785, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 1807, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
+2018-12-02 13:54:36 [scrapy.core.scraper] ERROR: Error processing {'autor': ['autor'],
+ 'autorId': 6,
+ 'categoriaDestinoId': 3,
+ 'codigoISBN': ['9789563500929'],
+ 'codigoISBNId': 5,
+ 'codigoSKU': ['322734'],
+ 'codigoSKUId': 6,
+ 'descripcionProducto': ['Desde el BMX y el ciclismo de montaña hasta las '
+                         'carreras de pista y carretera, esta completa guía a '
+                         'todo color presenta las últimas bicicletas de alto '
+                         'rendimiento y tecnología de ciclismo, así como '
+                         'modelos clave de épocas pasadas. La bicicleta exhibe '
+                         'bicicletas clásicas y de vanguardia y rastrea la '
+                         'evolución del ciclismo desde el siglo XIX hasta la '
+                         'actualidad. Las visitas virtuales muestran diseños '
+                         'importantes de bicicletas, como el Bianchi Paris '
+                         'Roubaix, y las fotografías de primeros planos se '
+                         'centran en elementos de diseño, componentes y '
+                         'construcción. Para contar la historia completa del '
+                         'ciclismo, Bicycle describe famosos ciclistas, '
+                         'fabricantes y marcas, e incluye imágenes detalladas, '
+                         'mapas e historias de las principales carreras y '
+                         'competiciones, desde la primera carrera registrada '
+                         'en 1868 hasta el Campeonato Mundial de Ciclo-Cross y '
+                         'el Tour. de France, triatlones, carreras olímpicas y '
+                         'más. Desde las primeras bicicletas de hierro, hasta '
+                         'el momento de la fibra de carbono, el libro de la '
+                         'bicicleta registra la\xa0fascinante historia del '
+                         'ciclismo con un asombroso detalle visual. '
+                         'Experimenta la emoción de las carreras de ciclismo '
+                         'más famosas. Conoce a los fabricantes y diseñadores '
+                         'que han impulsado un fenómeno global para el '
+                         'transporte, el ocio y el deporte. Revive momentos '
+                         'decisivos de la historia, en los que la bicicleta ha '
+                         'participado en la del mundo moderno.'],
+ 'editorial': ['DK'],
+ 'editorialId': 8,
+ 'encuadernacion': ['Tapa Dura'],
+ 'encuadernacionId': 7,
+ 'medidaValor': 'Unidad',
+ 'nombreProducto': ['EL LIBRO DE LA BICICLETA'],
+ 'precioId': 3,
+ 'tipoPrecio': 'Internet',
+ 'tipoProducto': 'Libros',
+ 'unidadId': 3,
+ 'valorPrecio': ['$28.491']}
+Traceback (most recent call last):
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\SVCPartners006\Downloads\Django-Scrapy\scrapy_app\scrapy_app\pipelines.py", line 29, in process_item
+    precio.save()
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 718, in save
+    force_update=force_update, update_fields=update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 748, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 831, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 869, in _do_insert
+    using=using, raw=raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\query.py", line 1136, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1288, in execute_sql
+    for sql, params in self.as_sql():
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in as_sql
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in <listcomp>
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1240, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1182, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 790, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 785, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 1807, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
+2018-12-02 13:54:37 [scrapy.core.scraper] ERROR: Error processing {'autor': ['ALONSO PEREZ JOSE MANUEL'],
+ 'autorId': 6,
+ 'categoriaDestinoId': 3,
+ 'codigoISBN': ['9788428399005'],
+ 'codigoISBNId': 5,
+ 'codigoSKU': ['253079'],
+ 'codigoSKUId': 6,
+ 'descripcionProducto': ['La obra aborda los contenidos del módulo profesional '
+                         'de Circuitos de Fluidos. Suspensión y Dirección, del '
+                         'Ciclo Formativo de grado medio correspondiente al '
+                         'título de Técnico en Electromecánica de Vehículos '
+                         'Automóviles, de la familia de Transporte y '
+                         'Mantenimiento de Vehículos, establecido por el Real '
+                         'Decreto 453/2010, de 16 de abril. Para esta nueva '
+                         'edición se ha llevado a cabo una actualización de '
+                         'todos los contenidos al incluir los más recientes '
+                         'sistemas y tecnologías aplicados a los automóviles, '
+                         'además de numerosas ilustraciones que facilitan la '
+                         'comprensión de los conceptos. Asimismo, como en '
+                         'ediciones anteriores, se describen minuciosamente '
+                         'los principios básicos y las leyes fundamentales que '
+                         'rigen el funcionamiento de los circuitos de fluidos, '
+                         'así como los sistemas de suspensión y dirección de '
+                         'los automóviles actuales, a través del análisis de '
+                         'la estructura y el funcionamiento de los mismos y de '
+                         'los procesos de verificación y control. Gracias a '
+                         'ello se llega con facilidad a la detección de las '
+                         'posibles averías y se determinan las causas que las '
+                         'producen, lo que permite realizar con fiabilidad las '
+                         'pertinentes reparaciones. Todas estas '
+                         'características hacen del libro una perfecta '
+                         'herramienta de enseñanza y aprendizaje para el '
+                         'módulo de Circuitos de Fluidos. Suspensión y '
+                         'Dirección.'],
+ 'editorial': ['PARANINFO'],
+ 'editorialId': 8,
+ 'encuadernacion': ['Rústico'],
+ 'encuadernacionId': 7,
+ 'medidaValor': 'Unidad',
+ 'nombreProducto': ['CIRCUITOS DE FLUIDOS SUSPENSIÓN Y DIRECCIÓN'],
+ 'precioId': 3,
+ 'tipoPrecio': 'Internet',
+ 'tipoProducto': 'Libros',
+ 'unidadId': 3,
+ 'valorPrecio': ['$16.150']}
+Traceback (most recent call last):
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\SVCPartners006\Downloads\Django-Scrapy\scrapy_app\scrapy_app\pipelines.py", line 29, in process_item
+    precio.save()
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 718, in save
+    force_update=force_update, update_fields=update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 748, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 831, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 869, in _do_insert
+    using=using, raw=raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\query.py", line 1136, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1288, in execute_sql
+    for sql, params in self.as_sql():
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in as_sql
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in <listcomp>
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1240, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1182, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 790, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 785, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 1807, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
+2018-12-02 13:54:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.feriachilenadellibro.cl/deportes/pelota-cosaca> (referer: https://www.feriachilenadellibro.cl/deportes?product_list_mode=list)
+2018-12-02 13:54:41 [scrapy.core.scraper] ERROR: Error processing {'autor': ['JERÓNIMO PARADA , ANDRES SANTA MARÍA '],
+ 'autorId': 6,
+ 'categoriaDestinoId': 3,
+ 'codigoISBN': ['9569203684'],
+ 'codigoISBNId': 5,
+ 'codigoSKU': ['298523'],
+ 'codigoSKUId': 6,
+ 'descripcionProducto': ['El espíritu de esta época y sus raíces históricas '
+                         'nutren estas biografías ficcionadas en las que la '
+                         'vida personal de los jugadores de fútbol y el pasado '
+                         'mítico de los países construyen la épica de cada '
+                         'selección. El camino que trazaron los mismos autores '
+                         'con Pelota Sudaca, donde dan vida a héroes y '
+                         'leyendas de Sudamérica, en este libro recorre el '
+                         'mundo entero, obviando los límites de la realidad y '
+                         'la ficción como una forma de adentrarse en los '
+                         'misterios de los pueblos y su diversidad.'],
+ 'editorial': ['LA POLLERA'],
+ 'editorialId': 8,
+ 'encuadernacion': ['Rústico/Bolsillo'],
+ 'encuadernacionId': 7,
+ 'medidaValor': 'Unidad',
+ 'nombreProducto': ['PELOTA COSACA'],
+ 'precioId': 3,
+ 'tipoPrecio': 'Internet',
+ 'tipoProducto': 'Libros',
+ 'unidadId': 3,
+ 'valorPrecio': ['$8.550']}
+Traceback (most recent call last):
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\SVCPartners006\Downloads\Django-Scrapy\scrapy_app\scrapy_app\pipelines.py", line 29, in process_item
+    precio.save()
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 718, in save
+    force_update=force_update, update_fields=update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 748, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 831, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 869, in _do_insert
+    using=using, raw=raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\query.py", line 1136, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1288, in execute_sql
+    for sql, params in self.as_sql():
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in as_sql
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in <listcomp>
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1240, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1182, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 790, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 785, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 1807, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
+2018-12-02 13:54:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.feriachilenadellibro.cl/deportes/ciclismo-en-carretera> (referer: https://www.feriachilenadellibro.cl/deportes?product_list_mode=list)
+2018-12-02 13:54:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.feriachilenadellibro.cl/deportes/1000-datos-locos-del-futbol-mundial-litvin-anibal> (referer: https://www.feriachilenadellibro.cl/deportes?product_list_mode=list)
+2018-12-02 13:54:42 [scrapy.core.scraper] ERROR: Error processing {'autor': ['GREGOR / CONCONI'],
+ 'autorId': 6,
+ 'categoriaDestinoId': 3,
+ 'codigoISBN': ['9788425516146'],
+ 'codigoISBNId': 5,
+ 'codigoSKU': ['282304'],
+ 'codigoSKUId': 6,
+ 'descripcionProducto': ['Presentado con un estilo claro y didáctico, este '
+                         'libro se centra en las técnicas de preparación, '
+                         'biomecánica del ciclismo en carretera, nutrición e '
+                         'hidratación, traumatismos y otros problemas médicos '
+                         'que se encuentran en el ciclismo de alta '
+                         'competición. Editado por dos destacadas autoridades '
+                         'mundiales, este libro ha reunido experiencias de '
+                         'Francia (de la Federación Francesa de Ciclismo), '
+                         'Holanda, Italia y los Estados Unidos (del US Olympic '
+                         'Training Center) para presentar unos estudios '
+                         'completos de primera línea para todos los implicados '
+                         'activamente en este deporte. Este volumen forma '
+                         'parte de una serie sobre diferentes deportes, '
+                         'publicada bajo los auspicios del Comité Olímpico '
+                         'Internacional destinada específicamente a '
+                         'entrenadores con preparación académica en las '
+                         'ciencias básicas, doctores en medicina, '
+                         'fisioterapeutas, competidores y otros profesionales '
+                         'relacionados con la salud.'],
+ 'editorial': ['HISPANO EUROPEA'],
+ 'editorialId': 8,
+ 'encuadernacion': ['Rústico'],
+ 'encuadernacionId': 7,
+ 'medidaValor': 'Unidad',
+ 'nombreProducto': ['CICLISMO EN CARRETERA'],
+ 'precioId': 3,
+ 'tipoPrecio': 'Internet',
+ 'tipoProducto': 'Libros',
+ 'unidadId': 3,
+ 'valorPrecio': ['$24.605']}
+Traceback (most recent call last):
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\SVCPartners006\Downloads\Django-Scrapy\scrapy_app\scrapy_app\pipelines.py", line 29, in process_item
+    precio.save()
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 718, in save
+    force_update=force_update, update_fields=update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 748, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 831, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 869, in _do_insert
+    using=using, raw=raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\query.py", line 1136, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1288, in execute_sql
+    for sql, params in self.as_sql():
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in as_sql
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in <listcomp>
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1240, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1182, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 790, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 785, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 1807, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
+2018-12-02 13:54:43 [scrapy.core.scraper] ERROR: Error processing {'autor': ['LITVIN'],
+ 'autorId': 6,
+ 'categoriaDestinoId': 3,
+ 'codigoISBN': ['9876127292'],
+ 'codigoISBNId': 5,
+ 'codigoSKU': ['488841'],
+ 'codigoSKUId': 6,
+ 'descripcionProducto': ['En los primeros años de fútbol, los árbitros usaban '
+                         'un pañuelo, que agitaban para avisar sobre sus '
+                         'decisiones. En 1878 se introdujo el silbato para '
+                         'dirigir. Según informes antropológicos hay '
+                         'comunidades aborígenes en Oceanía que no saben quién '
+                         'es el presidente de su país, pero conocen a '
+                         'Maradona, Pelé y Messi. El Estadio Tamaulipas, en '
+                         'México, se encuentra ubicado geográficamente en dos '
+                         'municipios diferentes: medio campo está en Ciudad '
+                         'Madero y el otro medio, en Tampico. A los 25 años, '
+                         'Lionel Messi superó a glorias del fútbol, como Johan '
+                         'Cruyff, Marco van Basten y Michel Platini, al '
+                         'obtener mayor cantidad de Balones de Oro. Estas son '
+                         'algunas de las 1.000 curiosidades que contiene este '
+                         'libro. Te sorprenderás con tantos datos insólitos y '
+                         'divertidos de la historia mundial del deporte más '
+                         'popular de todos los tiempos, desde sus orígenes '
+                         'hasta la actualidad. Prepárate: ¡leerlo es un '
+                         'verdadero golazo!'],
+ 'editorial': ['Tapa Dura'],
+ 'editorialId': 8,
+ 'encuadernacion': [],
+ 'encuadernacionId': 7,
+ 'medidaValor': 'Unidad',
+ 'nombreProducto': ['1000 DATOS LOCOS DEL FUTBOL MUNDIAL'],
+ 'precioId': 3,
+ 'tipoPrecio': 'Internet',
+ 'tipoProducto': 'Libros',
+ 'unidadId': 3,
+ 'valorPrecio': ['$9.405']}
+Traceback (most recent call last):
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\SVCPartners006\Downloads\Django-Scrapy\scrapy_app\scrapy_app\pipelines.py", line 29, in process_item
+    precio.save()
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 718, in save
+    force_update=force_update, update_fields=update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 748, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 831, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\base.py", line 869, in _do_insert
+    using=using, raw=raw)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\query.py", line 1136, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1288, in execute_sql
+    for sql, params in self.as_sql():
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in as_sql
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1241, in <listcomp>
+    for obj in self.query.objs
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1240, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1182, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 790, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 785, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "c:\users\svcpartners006\miniconda3\lib\site-packages\django\db\models\fields\__init__.py", line 1807, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
+2018-12-02 13:54:43 [scrapy.core.engine] INFO: Closing spider (finished)
+2018-12-02 13:54:43 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 10953,
+ 'downloader/request_count': 27,
+ 'downloader/request_method_count/GET': 27,
+ 'downloader/response_bytes': 873120,
+ 'downloader/response_count': 27,
+ 'downloader/response_status_count/200': 26,
+ 'downloader/response_status_count/404': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 12, 2, 16, 54, 43, 653469),
+ 'log_count/DEBUG': 28,
+ 'log_count/ERROR': 25,
+ 'log_count/INFO': 7,
+ 'request_depth_max': 1,
+ 'response_received_count': 27,
+ 'scheduler/dequeued': 26,
+ 'scheduler/dequeued/memory': 26,
+ 'scheduler/enqueued': 26,
+ 'scheduler/enqueued/memory': 26,
+ 'start_time': datetime.datetime(2018, 12, 2, 16, 54, 5, 118980)}
+2018-12-02 13:54:43 [scrapy.core.engine] INFO: Spider closed (finished)

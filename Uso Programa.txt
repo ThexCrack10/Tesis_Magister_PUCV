@@ -1,0 +1,16 @@
+Ejecutar servidor (en django-scrapy):
+- python manage.py runserver
+Ejecutar el syncbd (en django-scrapy>scrapy_app):
+- scrapyd
+Ejecutar la spyder
+- curl http://localhost:6800/schedule.json -d project=default -d spider=deportes-xpath
+Comandos extra:
+Hacer migraciones:
+- python manage.py makemigrations
+- python manage.py migrate
+Limpiar desde 0 la bd:
+- python manage.py flush
+Crear super usuario
+- python manage.py createsuperuser
+Alternativa de ejecutar la spider:
+- scrapy crawl deportes-xpath

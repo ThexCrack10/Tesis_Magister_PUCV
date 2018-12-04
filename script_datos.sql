@@ -1,0 +1,10 @@
+INSERT INTO main_rubrocomercio (id, nombreRubro) VALUES (731, 'Librerías');
+INSERT INTO main_comercio (id, nombreComercio, rubroId_id) VALUES (3, 'Feria del Libro', 731);
+INSERT INTO main_sucursal (id, nombreSucursal, direccionSucursal, paisSucursal, comercioId_id) VALUES (3, 'Sitio Web', 'Internet', 'Chile', 3);
+INSERT INTO main_categoria (id, nombreCategoria, descripcionCategoria, categoriaPadreFlag) VALUES (3, 'Deportes', 'Librería - Deporte', 0);
+INSERT INTO main_caracteristica (id, nombreCaracteristica) VALUES (6, 'Autor');
+INSERT INTO main_caracteristica (id, nombreCaracteristica) VALUES (7, 'Encuadernación');
+INSERT INTO main_caracteristica (id, nombreCaracteristica) VALUES (8, 'Editorial');
+INSERT INTO main_unidaddemedida (id, nombreMedida) VALUES (3, 'Cantidad');
+INSERT INTO main_tipocodigo (id, nombreCodigo) VALUES (5, 'SKU');
+INSERT INTO main_tipocodigo (id, nombreCodigo) VALUES (6, 'ISBN');
